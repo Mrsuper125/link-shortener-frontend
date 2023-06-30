@@ -5,7 +5,7 @@ import Page404 from "./pages/404.tsx";
 import Redirect from "./pages/redirect.tsx";
 
 const App = () => {
-    return (
+        return (
         <BrowserRouter>
             <Routes>
                 <Route path={"/"} element={<Home/>}/>

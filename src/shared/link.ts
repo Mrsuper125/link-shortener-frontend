@@ -1,4 +1,4 @@
-export interface link {
+export interface Link {
     url: string;
     id: number,
     expirationDate: number
