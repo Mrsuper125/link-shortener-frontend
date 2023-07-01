@@ -25,7 +25,7 @@ function tryPosting(){
             break;
     }
     const expireDate = timestamp+deltaTime;
-    postUrl({url:url, id:0, expirationDate:expireDate})
+    postUrl({url:url, expirationDate:expireDate})
     window.location.reload()
 }
 
