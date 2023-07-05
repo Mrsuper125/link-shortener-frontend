@@ -10,5 +10,5 @@ export async function getUrl(id : number){
 export async function postUrl(link : Link){
     // @ts-ignore
     const response = await axios.post("http://127.0.0.1:8000/add", {url:link.url, expiration_date: link.expirationDate}, {headers:{'Access-Control-Allow-Origin' : '*'}})
-    //console.log(response)
+    return response.data
 }
