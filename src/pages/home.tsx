@@ -52,20 +52,23 @@ const Home = () => {
         }
     }, [url])
     return (
-        <MantineProvider>
+        <MantineProvider //theme={{
+        //     colors: {
+        //         primary: ["#6060ff"]
+        //     }
+        // }}
+        >
             <form className={"create-link-form"} onSubmit={(e) => e.preventDefault()}>
                 <h1 className={"header"}>Сокращатель ссылок</h1>
                 <hr/>
                 <div className={"form-items"}>
-                    <h2 className={"instruction"}> Введите адрес ссылки:</h2>
-                    <div className={"field-with-comment"}>
-                        <TextInput type={"url"} placeholder={"Ваша ссылка"} className={"field"} error={comment} onChange={(e) => setUrl(e.target.value)}/>
+                    {/*<h2 className={"instruction"}> Введите адрес ссылки:</h2>*/}
+                    <div style={{marginBottom: "0px"}}>
+                        <TextInput classNames={{label: classes.label}} type={"url"} placeholder={"Ваша ссылка"} className={"field"} size={"sm"} label={"Введите адрес ссылки:"} withAsterisk error={comment} onChange={(e) => setUrl(e.target.value)}/>
                     </div>
-                    <div>
-                        <Button variant={"outline"} className={"create-button"} color={"dark"} onClick={() => tryPosting()}>Создать</Button>
-                    </div>
-                    <h3 className={"instruction"}>Выберите срок действия ссылки:</h3>
-                    <Radio.Group value={selected} onChange={setSelected}>
+                        <Button variant={"outline"} className={"create-button"} color={"dark"} size={"xs"} onClick={() => tryPosting()}>Создать</Button>
+                    {/*<h3 className={"instruction"}>Выберите срок действия ссылки:</h3>*/}
+                    <Radio.Group value={selected} onChange={setSelected} label={"Выберите срок действия ссылки:"} classNames={{label: classes.label}}>
                         <Radio classNames={{label: classes.radioLabel}} className="radio" label = {"1 час"} value="hour" onChange={(event)=>setSelected(event.target.value)}/>
                         <Radio classNames={{label: classes.radioLabel}} className="radio" label = {"1 день"} value="day" onChange={(event)=>setSelected(event.target.value)}/>
                         <Radio classNames={{label: classes.radioLabel}} className="radio" label = {"1 неделя"} value="week" onChange={(event)=>setSelected(event.target.value)}/>

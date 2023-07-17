@@ -6,7 +6,6 @@
     margin-top: 50px;
     margin-bottom: 50px;
     min-width: 200px;
-    min-height: 300px;
     margin-left: auto;
     margin-right: auto;
     max-width: 500px;
@@ -17,6 +16,7 @@
     padding-left: 15px;
     padding-top: 10px;
     text-align: center;
+    font-family: Arial, serif;
 }
 
 .form-items > *{
@@ -25,17 +25,13 @@
     margin-left: 15px;
 }
 
-.instruction{
-    font-weight: normal;
-    font-family: "Times New Roman", serif;
-}
-
 .field{
     min-height: 25px;
     horiz-align: center;
     border-radius: 5px;
     border: 2px black;
     display: inline-block;
+    margin-bottom: 3px;
 }
 
 .comment{
@@ -45,6 +41,7 @@
 }
 
 .create-button{
+    margin-top: 3px;
     border-radius: 5px;
     border-width: 1px;
     padding: 3px 3px 3px 3px;
@@ -58,11 +55,6 @@
     background-color: lightgrey;
 }
 
-.radio-group > *{
-    margin-top: 5px;
-    display: inline-block;
-}
-
 .radio{
     margin-top: 5px;
     vertical-align: center;
@@ -73,5 +65,8 @@
 
 .credits{
     margin-left: 10px;
+    margin-right: 10px;
     padding-bottom: 10px;
+    font-family: Arial, serif;
+    font-size: 15px;
 }
