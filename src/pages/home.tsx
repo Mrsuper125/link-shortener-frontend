@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import "../shared/styles.css"
 import validator from 'validator'
 import {postUrl} from "../shared/api.ts";
-import {MantineProvider, Radio, Button, TextInput} from "@mantine/core";
+import {MantineProvider, Radio, Button, TextInput, px} from "@mantine/core";
 import {useStyles} from "../shared/styles.ts";
 
 let selected : string, url : string, comment : string;
@@ -46,7 +46,7 @@ const Home = () => {
                 setComment("")
                 setValid(true)
             } else {
-                setComment("Ваша ссылка неправильная")
+                setComment("Ваша ссылка некорректна")
                 setValid(false)
             }
         }
@@ -60,7 +60,7 @@ const Home = () => {
         >
             <form className={"create-link-form"} onSubmit={(e) => e.preventDefault()}>
                 <h1 className={"header"}>Сокращатель ссылок</h1>
-                <hr/>
+                <hr style={{marginTop: px(0)}}/>
                 <div className={"form-items"}>
                     {/*<h2 className={"instruction"}> Введите адрес ссылки:</h2>*/}
                     <div style={{marginBottom: "0px"}}>
@@ -68,14 +68,16 @@ const Home = () => {
                     </div>
                         <Button variant={"outline"} className={"create-button"} color={"dark"} size={"xs"} onClick={() => tryPosting()}>Создать</Button>
                     {/*<h3 className={"instruction"}>Выберите срок действия ссылки:</h3>*/}
-                    <Radio.Group value={selected} onChange={setSelected} label={"Выберите срок действия ссылки:"} classNames={{label: classes.label}}>
+                    <Radio.Group value={selected} onChange={setSelected} label={"Выберите срок действия ссылки:"} classNames={{label: classes.label}} withAsterisk>
                         <Radio classNames={{label: classes.radioLabel}} className="radio" label = {"1 час"} value="hour" onChange={(event)=>setSelected(event.target.value)}/>
                         <Radio classNames={{label: classes.radioLabel}} className="radio" label = {"1 день"} value="day" onChange={(event)=>setSelected(event.target.value)}/>
                         <Radio classNames={{label: classes.radioLabel}} className="radio" label = {"1 неделя"} value="week" onChange={(event)=>setSelected(event.target.value)}/>
                     </Radio.Group>
                 </div>
                 <hr/>
-                <p className={"credits"}>Сделано с любовью Александром Маратовичем</p>
+                <div className={"form-items"}>
+                    <p className={"credits"}>Сделано с любовью Александром Маратовичем</p>
+                </div>
             </form>
         </MantineProvider>
     );

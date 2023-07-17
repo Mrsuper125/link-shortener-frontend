@@ -6,8 +6,7 @@ export const useStyles = createStyles((theme) => ({
         verticalAlign: "center",
         display: "inline-block",
         paddingLeft: px(5),
-        fontWeight: "normal",
-        fontFamily: "Times New Roman"
+        fontWeight: "normal"
     },
     linkFieldLabel: {
         fontSize: px(15)

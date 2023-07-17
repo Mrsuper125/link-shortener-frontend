@@ -1,5 +1,5 @@
 .create-link-form{
-    background-color: #6060ff;
+    background-color: #4586f4;
     border-radius: 20px;
     vertical-align: top;
     horiz-align: center;
@@ -13,16 +13,19 @@
 }
 
 .header{
-    padding-left: 15px;
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin: 0 0 0 0;
     text-align: center;
-    font-family: Arial, serif;
+    vertical-align: center;
+    font-family: "Times New Roman", serif;
 }
 
 .form-items > *{
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 15px;
+    font-family: Helvetica, serif;
 }
 
 .field{
@@ -35,7 +38,6 @@
 }
 
 .comment{
-    padding-left: 5px;
     font-size: medium;
     color: #dc1111;
 }
@@ -63,10 +65,11 @@
     padding-right: 5px;
 }
 
+.radio > *{
+    font-family: Helvetica, serif;
+}
+
 .credits{
-    margin-left: 10px;
-    margin-right: 10px;
     padding-bottom: 10px;
-    font-family: Arial, serif;
     font-size: 15px;
 }
