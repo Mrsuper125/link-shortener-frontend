@@ -16,7 +16,11 @@ const Redirect = () => {
             window.location.replace("/error")
         }
     }
-    )
+    ).catch((reason) => {
+        if (reason.response.data.message == "link not found") {
+            window.location.replace("/error")
+        }
+    })
 
     return (
         <div>
